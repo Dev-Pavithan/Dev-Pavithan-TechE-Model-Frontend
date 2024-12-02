@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-// const backendUrl = "http://localhost:8000";
+// const backendUrl = "https://tech-e-modal-backend.vercel.app";
 
 const ChatContext = createContext();
 
@@ -45,7 +45,7 @@ export const ChatProvider = ({ children }) => {
   // Function to generate lip-sync data via API
   // const generateLipSync = async (audioFile) => {
   //   try {
-  //     const response = await fetch(`http://localhost:8000/generate-lipsync`, {
+  //     const response = await fetch(`https://tech-e-modal-backend.vercel.app/generate-lipsync`, {
   //       method: "POST",
   //       headers: {
   //         "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export const ChatProvider = ({ children }) => {
 
   const generateLipSync = async (audioFile) => {
     try {
-      const response = await fetch(`http://localhost:8000/generate-lipsync`, {
+      const response = await fetch(`https://tech-e-modal-backend.vercel.app/generate-lipsync`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -105,7 +105,7 @@ export const ChatProvider = ({ children }) => {
   const chat = async (message) => {
     setLoading(true);
 
-    const data = await fetch(`http://localhost:8000/chat`, {
+    const data = await fetch(`https://tech-e-modal-backend.vercel.app/chat`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
